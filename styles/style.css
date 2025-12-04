@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 
+    font-family: "Cardo", serif; */
+}
+
+body {
+    display: grid;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "header"
+        "seccion-1"
+        "seccion-2"
+        "seccion-3"
+        "seccion-4"
+        "seccion-5"
+        "footer";
+}
+
+header {
+    background: linear-gradient(to top right, #313455e7), url(../assets/images/Layer\ 34.png);
+    padding: 0 15rem;
+    grid-area: header;
+
+    nav {
+        font-family: "Raleway", sans-serif;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 2rem 0;
+        border-bottom: 2px solid #4F516A;
+
+        ul {
+            display: grid;
+            list-style: none;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: 1rem;
+
+            a {
+                color: #C4C6D2;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .principal {
+        padding: 10rem 0;
+        text-align: center;
+        font-family: "Raleway", sans-serif;
+
+        h1 {
+            color: white;
+            font-size: 4rem;
+        }
+
+        p {
+            padding-top: 1rem;
+            color: white;
+        }
+
+        button {
+            border: none;
+            background-color: #E84546;
+            padding: 0.7rem 1.5rem;
+            color: white;
+            margin-top: 4rem;
+            font-family: "Open Sans", sans-serif;
+        }
+    }
+}
+
+.seccion-1 {
+    grid-area: seccion-1;
+    padding: 6rem 15rem;
+}
+
+.seccion-2 {
+    grid-area: seccion-2;
+}
+
+.seccion-3 {
+    grid-area: seccion-3;
+}
+
+.seccion-4 {
+    grid-area: seccion-4;
+}
+
+.seccion-5 {
+    grid-area: seccion-5;
+}
+
+footer {
+    grid-area: footer;
+
+    .footer-1 {
+        background-color: #3A3E63;
+    }
+
+    .footer-2 {
+        background-color: #313455;
+    }
+}
