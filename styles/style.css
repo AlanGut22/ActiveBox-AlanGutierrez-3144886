@@ -17,6 +17,7 @@ body {
         "seccion-4"
         "seccion-5"
         "footer";
+    width: 100%;
 }
 
 header {
@@ -26,9 +27,11 @@ header {
 
     nav {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, auto);
         align-items: center;
         padding: 2rem 0;
+        justify-content: space-between;
+        column-gap: 1rem;
         border-bottom: 2px solid #4F516A;
 
         ul {
@@ -194,7 +197,7 @@ header {
         h2 {
             font-size: 2rem;
             font-weight: 100;
-            width: 60%;
+            width: 76%;
             font-family: "Cardo", serif;
             padding-bottom: 1.5rem;
         }
@@ -269,7 +272,8 @@ footer {
             p {
                 color: #9A9EBB;
             }
-            .ubicacion{
+
+            .ubicacion {
                 padding-bottom: 0.5rem;
             }
 
@@ -289,14 +293,302 @@ footer {
         background-color: #313455;
         padding: 2rem;
         text-align: center;
-        p{
+
+        p {
             color: #8A8F93;
-            i{
+
+            i {
                 color: #E54247;
             }
 
-            span{
+            span {
                 color: white;
+            }
+        }
+
+        .copyright {
+            padding-bottom: 0.6rem;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    header {
+        padding: 0 8rem;
+
+        nav {
+            ul {
+                column-gap: 1rem;
+            }
+        }
+
+        .principal {
+            padding: 8rem 0;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            button {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    .seccion-1,
+    .seccion-3,
+    .seccion-5 {
+        padding: 5rem 8rem;
+    }
+
+    .seccion-2 {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .seccion-3 {
+        justify-content: center;
+        grid-template-columns: repeat(2, 20rem);
+        gap: 3rem;
+    }
+
+    .seccion-4 {
+        .info {
+            h2 {
+                width: 100%;
+                font-size: 1.3rem;
+            }
+
+            .autor {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    footer {
+        .footer-1 {
+            padding: 5rem 8rem;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+
+    header {
+        padding: 0 6rem;
+
+        nav {
+            column-gap: 2rem;
+
+            img {
+                width: 8rem;
+            }
+
+            ul {
+                column-gap: 1rem;
+
+                a {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .principal {
+            padding: 6rem 0;
+
+            h1 {
+                font-size: 2.7rem;
+            }
+
+            button {
+                margin-top: 2.3rem;
+            }
+        }
+    }
+
+    .seccion-1,
+    .seccion-3,
+    .seccion-5 {
+        padding: 5rem 6rem;
+    }
+
+    .seccion-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seccion-3 {
+        grid-template-columns: repeat(2, 15rem);
+    }
+
+    .seccion-4 {
+        .info {
+            padding: 3rem;
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .autor {
+                font-size: 0.7rem;
+                padding-bottom: 1.5rem;
+            }
+        }
+    }
+
+    footer {
+        .footer-1 {
+            padding: 5rem 6rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 4rem;
+
+        nav {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            gap: 1rem;
+            justify-content: center;
+
+            img {
+                width: auto;
+                justify-self: center;
+            }
+
+            ul {
+                column-gap: 0.7rem;
+                justify-content: space-evenly;
+
+                a {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .principal {
+            padding: 4rem 0;
+
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .seccion-1,
+    .seccion-3,
+    .seccion-5 {
+        padding: 4rem;
+    }
+
+    .seccion-1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .seccion-3 {
+        grid-template-columns: repeat(1, 20rem);
+        gap: 2rem;
+    }
+
+    .seccion-4 {
+        grid-template-columns: repeat(1, auto);
+
+        .info {
+            padding: 2rem;
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .puntos {
+                font-size: 0.5rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .seccion-5 {
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .subtitulo {
+            font-size: 0.7rem;
+        }
+
+        button {
+            font-size: 0.7rem;
+        }
+    }
+
+    footer {
+        .footer-1 {
+            padding: 4rem;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 2rem;
+
+        nav {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem 0 1.5rem;
+
+            img {
+                width: auto;
+                justify-self: center;
+            }
+
+            ul {
+                gap: 0.8rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                a {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .principal {
+            padding: 3rem 0;
+
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .seccion-1,
+    .seccion-3,
+    .seccion-5 {
+        padding: 3rem 2rem;
+    }
+
+    .seccion-2 {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .seccion-3 {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    footer {
+        .footer-1 {
+            padding: 3rem 2rem;
+        }
+
+        .footer-2{
+            .copyright{
+                padding-bottom: 1rem;
             }
         }
     }
