@@ -486,7 +486,7 @@ footer {
     }
 
     .seccion-3 {
-        grid-template-columns: repeat(1, 20rem);
+        grid-template-columns: repeat(1, 21rem);
         gap: 2rem;
     }
 
@@ -530,7 +530,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     header {
         padding: 0 2rem;
 
